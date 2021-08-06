@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-api-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banfstory/Nodejs-API-MySQL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/banfstory/Nodejs-API-MySQL/issues"
+  },
+  "homepage": "https://github.com/banfstory/Nodejs-API-MySQL#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
