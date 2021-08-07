@@ -4,7 +4,7 @@ const router = express.Router();
 // create database (remove property of 'database' to execute this code)
 router.get('/createdb', (req, res) => {
     let sql = 'CREATE DATABASE forum_db';
-    db.query(sql, (err, result) => {
+    res.locals.db.query(sql, (err, result) => {
         if(err) throw err;
         console.log(result);
         res.send('DB added');
@@ -13,7 +13,7 @@ router.get('/createdb', (req, res) => {
 
 // create user table (execute create table first)
 router.get('/createusertable', (req, res) => {
-    let sql = 'CREATE TABLE user(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, username VARCHAR(100), email VARCHAR(100),  password VARCHAR(100))';
+    let sql = 'CREATE TABLE user(id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, username VARCHAR(100), email VARCHAR(100),  password VARCHAR(300))';
     res.locals.db.query(sql, (err, result) => {
         if(err) throw err;
         console.log(result);
