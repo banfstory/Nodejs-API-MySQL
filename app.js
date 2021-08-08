@@ -26,6 +26,7 @@ const api = require('./routes/api.js');
 app.use((req, res, next) => {
     res.locals.db = db;
     res.locals.db.prettierJSON = prettierJSON;
+    res.locals.TOKEN_SECRET = '_S\xdfK\xdcC\xb7\xc2d6\x9a\x85\x18\xd0\x057';
     next();
 });
 
